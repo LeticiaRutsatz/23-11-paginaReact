@@ -16,11 +16,8 @@ interface DirectionProps {
     direction: string;
 }
 
-interface BackgroundProps {
-    background: string;
-}
 
-const DivText = styled.div<BackgroundProps>`
+const DivText = styled.div`
     width: 50%;
     height: 100%;
     padding: 100px;
@@ -28,8 +25,8 @@ const DivText = styled.div<BackgroundProps>`
     font-weight: lighter;
     font-style: unset;
     font-family: 'Poppins', sans-serif;
-    background-color: ${(props)=> props.background};
-    color: #fff;
+    background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.color};
     
 
     & > h3 {

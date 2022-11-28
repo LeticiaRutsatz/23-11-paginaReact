@@ -1,22 +1,17 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
+import styled from 'styled-components';
 
-function Header(){
-    return(
-        <React.Fragment>
-            <Box sx={{
-                backgroundColor: '#000060',
-                color: '#f1f1f1',
-                width: '100vw',
-                height: '50vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent:'center',
-            }}>
-                <Typography variant='h4'>Minha Primeira Página com React</Typography>
-            </Box>
-        </React.Fragment>
-    )
+
+
+export const HeaderFooter = styled.div<HeigthProps>`
+    background-color: #000060;
+    color: #ffffff;
+    width: 100vw;
+    height: ${(props)=> props.height}vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+`
+interface HeigthProps {
+    height: number;
 }
-
-export default Header;
